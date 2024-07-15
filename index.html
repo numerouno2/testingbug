@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catatan Deposit Uang</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Catatan Deposit Uang</h1>
+      <div class="content">
+        <div class="form-container">
+          <h2>Catatan Deposit</h2>
+          <form id="depositForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="amount">Jumlah Deposit (Rupiah):</label>
+            <input type="number" id="amount" name="amount" required />
+
+            <label for="dateOption">Pilih Opsi Tanggal:</label>
+            <select id="dateOption" name="dateOption" required>
+              <option value="auto">Otomatis</option>
+              <option value="manual">Manual</option>
+            </select>
+
+            <label for="manualDate" id="manualDateLabel" style="display: none"
+              >Tanggal (yyyy-mm-dd):</label
+            >
+            <input
+              type="date"
+              id="manualDate"
+              name="manualDate"
+              style="display: none"
+            />
+
+            <button type="submit">Submit</button>
+          </form>
+          <div id="message"></div>
+        </div>
+        <div class="history-container">
+          <h2>Riwayat Deposit</h2>
+          <ul id="history"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
