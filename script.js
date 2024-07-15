@@ -48,6 +48,8 @@ document
 
     if (dateOption === "manual") {
       date = new Date(document.getElementById("manualDate").value);
+      // Adjust for time zone differences
+      date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
     } else {
       date = new Date();
     }
